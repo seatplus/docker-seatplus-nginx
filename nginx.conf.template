@@ -47,6 +47,8 @@ http {
             fastcgi_index index.php;
             fastcgi_param SCRIPT_FILENAME /var/www/public/index.php;
             include fastcgi_params;
+            fastcgi_read_timeout 3000;
+            proxy_read_timeout 3000;
         }
     }
 }
